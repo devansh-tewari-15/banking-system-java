@@ -7,7 +7,7 @@ A multithreaded, file-based Java Banking System with admin and user roles. This 
 ## 🚀 Features
 
 ### 👨‍💼 Admin
-- Add, Remove, and View all users.
+- Add, Remove (Only if balance is 0), and View all users.
 - Automatically remove users who haven’t deposited within 3 minutes (background thread).
 - View transactions of the users.
 
@@ -98,8 +98,8 @@ You can use the following credentials to log in as an Admin:
 ---
 ## 🛠️ Author
 Devansh Tewari  
-📧 devanshtewari15@example.com  
-📌 Java | Multithreading | Systems Design  
+📧 tewari.devansh15@gmail.com  
+📌 Core Java | Systems Design  
 
 ---
 
