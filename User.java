@@ -105,7 +105,7 @@ public class User implements Account, Serializable {
             System.out.println("------   LOGOUT   ------     (Press 9)");
             System.out.println("========================"+Main.ANSI_RESET);
 
-            System.out.println("Enter Your Choice");
+            System.out.println("Enter Your Choice :");
             int choice;
             if (Main.sc.hasNextInt()) {
                 choice = Main.sc.nextInt();
@@ -132,8 +132,8 @@ public class User implements Account, Serializable {
                     System.out.println(Main.ANSI_RED+"\nEnter a valid number (1 - 9)"+Main.ANSI_RESET);
                 }
             }
-            System.out.println("\nPress Enter To Continue");
-            Main.sc.nextLine();
+        //    System.out.println("\nPress Enter To Continue");
+        //    Main.sc.nextLine();
         }
     }
 
@@ -429,6 +429,7 @@ public class User implements Account, Serializable {
                     current.setBankBalance(current.getBankBalance() - finalAmount);
                     if (current.getBankBalance() == 0) {
                         current.hasDeposited = false;
+                        current.createdAt = System.currentTimeMillis();
                     }
                     if(that.hasDeposited == false){
                         that.hasDeposited = true;
@@ -536,7 +537,9 @@ public class User implements Account, Serializable {
                         System.out.println(t.toString());
                     }
                     System.out.println("============================================"+Main.ANSI_RESET);
-                    showMenu();
+                    System.out.println("Press Enter To Go To Menu");
+                    Main.sc.nextLine();
+                    return;
                 }
             }
             else{

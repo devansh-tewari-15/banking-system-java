@@ -41,8 +41,10 @@ public class Helper {
     // Helper Method that starts the authentication for user
     public static void startLogin(){
         System.out.print("Enter username : ");
+        System.out.println();
         String thisUsername = Main.sc.nextLine();
         System.out.print("Enter password : ");
+        System.out.println();
         String thisPassword = Main.sc.nextLine();
         ArrayList<User> array = Helper.getUserList();
         if(array==null){

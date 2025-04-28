@@ -48,11 +48,11 @@ public class Main {
         System.out.println("---   QUIT APP  ---    (PRESS 3)");
         System.out.println("===================");
         System.out.println(ANSI_RESET);
+        System.out.print("Enter Your Choice: ");
         while (true) {
             int choice;
             while (true) {
                 System.out.println();
-                System.out.print("Enter Your Choice: ");
                 if (sc.hasNextInt()) {
                     choice = sc.nextInt();
                     sc.nextLine(); // clear buffer

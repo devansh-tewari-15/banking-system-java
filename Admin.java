@@ -22,8 +22,10 @@ public class Admin implements Account {
     // Prompting user for login
     private void loginPrompt() {
         System.out.print("Enter Username: ");
+        System.out.println();
         username = Main.sc.nextLine();
         System.out.print("Enter Password: ");
+        System.out.println();
         password = Main.sc.nextLine();
 
         if (login()) {
@@ -69,8 +71,6 @@ public class Admin implements Account {
             System.out.println("------   LOGOUT   ------     (Press 5)");
             System.out.println("========================");
             System.out.println(Main.ANSI_RESET);
-            System.out.println("Press Enter To Continue");
-            Main.sc.nextLine();
             System.out.print("Enter Your Choice : ");
             int choice;
             if (Main.sc.hasNextInt()) {
@@ -148,8 +148,10 @@ public class Admin implements Account {
             for (User user : localList) {
                 System.out.println(Main.ANSI_GREEN+user.toString()+Main.ANSI_RESET);
                 System.out.println("=============================");
+                System.out.println();
             }
-            System.out.println();
+            System.out.println("Press Enter To See Menu");
+            Main.sc.nextLine();
         }
     }
 
@@ -206,6 +208,9 @@ public class Admin implements Account {
             String uName = Main.sc.nextLine();
             if(isUniqueUserName(users, uName)){
                 System.out.println(Main.ANSI_RED+"\nUsername Not In The System"+Main.ANSI_RESET);
+                System.out.println("Press Enter To Continue");
+                Main.sc.nextLine();
+                System.out.println();
                 showMenu();
                 return;
             }
